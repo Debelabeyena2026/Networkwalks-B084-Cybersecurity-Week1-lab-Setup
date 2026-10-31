@@ -35,23 +35,36 @@ The goal is to establish a flexible virtual environment that can be expanded wit
 
 ---
 
+
+
 ## 🏗️ Lab Architecture
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Host%20Machine-Windows-blue?style=flat-square&logo=windows" />
-  <br>
-  ⬇️
-  <br>
-  <img src="https://img.shields.io/badge/Hypervisor-Oracle%20VirtualBox-orange?style=flat-square&logo=virtualbox" />
-  <br>
-  ⬇️
-  <br>
-  <img src="https://img.shields.io/badge/Virtual%20Machine-Kali%20Linux-557C94?style=flat-square&logo=kalilinux" />
-  <br>
-  ⬇️
-  <br>
-  <img src="https://img.shields.io/badge/Environment-Cybersecurity%20Lab-red?style=flat-square" />
-</p>
+```text
++----------------------------------+
+|        Host Machine              |
+|          Windows                |
++----------------------------------+
+                 |
+                 v
++----------------------------------+
+|          Hypervisor              |
+|       Oracle VirtualBox          |
++----------------------------------+
+                 |
+                 v
++----------------------------------+
+|       Virtual Machine            |
+|         Kali Linux               |
++----------------------------------+
+                 |
+                 v
++----------------------------------+
+|     Cybersecurity Lab            |
+|   Ethical Hacking Environment    |
++----------------------------------+
+```
+
+
 
 ### 🖥️ Lab Components
 
