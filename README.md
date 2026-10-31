@@ -1,6 +1,6 @@
 
 
-# 🔐 Cybersecurity Lab Environment Setup
+#  Cybersecurity Lab Environment Setup
 
 ### Building a Virtual Cybersecurity Lab Using Kali Linux & Oracle VirtualBox
 
