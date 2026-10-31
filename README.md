@@ -284,8 +284,3 @@ Cybersecurity Analyst | SOC Analyst | Cybersecurity Enthusiast
 
 ---
 
-<p align="center">
-  ⭐ If you find this project helpful, feel free to star the repository!
-  <br><br>
-  <b>Learning by doing. Building skills. Securing the digital world. 🔐</b>
-</p>
