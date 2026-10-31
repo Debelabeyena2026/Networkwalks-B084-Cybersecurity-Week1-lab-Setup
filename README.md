@@ -1,317 +1,278 @@
-<div align="center">
+
 
 # 🔐 Cybersecurity Lab Environment Setup
 
-**Building an isolated virtual lab for penetration testing and ethical hacking practice**
-</div>
+### Building a Virtual Cybersecurity Lab Using Kali Linux & Oracle VirtualBox
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Skill-Cybersecurity-404040?style=flat-square&labelColor=C00000" />
-  <img src="https://img.shields.io/badge/Ver-Virtualbox%20v7.2-0070C0?style=flat-square&labelColor=000000" />
-  <img src="https://img.shields.io/badge/Kali%20Linux-v2026.2-E87500?style=flat-square&labelColor=000000&logo=kalilinux&logoColor=white" />
-  <img src="https://img.shields.io/badge/Skill-Linux-404040?style=flat-square&labelColor=C00000" />
-  <img src="https://img.shields.io/badge/Network-10.0.0.0%2F24-238F89?style=flat-square&labelColor=000000" />
-  <img src="https://img.shields.io/badge/Penetration%20Testing-C00000?style=flat-square&labelColor=000000&logo=kalilinux&logoColor=white" />
-  <img src="https://img.shields.io/badge/Skill-Virtualization-404040?style=flat-square&labelColor=C00000" />
-  <img src="https://img.shields.io/badge/GitHub-404040?style=flat-square&labelColor=0070C0&logo=github&logoColor=white" />
-  <img src="https://img.shields.io/badge/Kali%20Linux-404040?style=flat-square&labelColor=C00000&logo=kalilinux&logoColor=white" />
-  <img src="https://img.shields.io/badge/NetworkWalks-404040?style=flat-square&labelColor=C00000" />
-  <img src="https://img.shields.io/badge/Ethical%20Hacking-E87500?style=flat-square&labelColor=000000&logo=kalilinux&logoColor=white" />
-  <img src="https://img.shields.io/badge/Waqas%20Karim%20CCIE-C00000?style=flat-square" />
+  <img src="https://img.shields.io/badge/Platform-VirtualBox-blue?style=for-the-badge&logo=virtualbox" />
+  <img src="https://img.shields.io/badge/OS-Kali%20Linux-557C94?style=for-the-badge&logo=kalilinux" />
+  <img src="https://img.shields.io/badge/Focus-Cybersecurity-red?style=for-the-badge&logo=hackthebox" />
+  <img src="https://img.shields.io/badge/Status-Completed-success?style=for-the-badge" />
 </p>
 
 ---
 
 ## 📌 Project Overview
 
-This project focuses on setting up a **virtual cybersecurity and penetration-testing laboratory** using VirtualBox and Kali Linux.
+This project documents the installation and configuration of a virtual cybersecurity laboratory using **Oracle VirtualBox and Kali Linux**.
 
-The purpose of the lab is to create a controlled environment where cybersecurity tools, network scanning, reconnaissance, vulnerability assessment, and other security-testing activities can be performed safely and repeatedly.
+The lab provides a controlled and isolated environment for learning cybersecurity fundamentals, practicing ethical hacking, exploring penetration-testing tools, and conducting hands-on security experiments.
 
-The lab is configured on a private virtual network so that additional machines can be added later and used as targets for authorized security testing.
-
----
-
-
-## 🎯 Objectives
-
-The main objectives of this project are to:
-
-- Install and configure VirtualBox.
-- Install/import Kali Linux as a virtual machine.
-- Create a private **NAT Network** for the cybersecurity lab.
-- Configure network connectivity for Kali Linux.
-- Assign a consistent IP address to the Kali VM.
-- Verify network connectivity and DNS resolution.
-- Take a clean VM snapshot for recovery.
-- Document the complete setup process.
-- Prepare the environment for future cybersecurity projects.
+The goal is to establish a flexible virtual environment that can be expanded with additional virtual machines for attacker-and-target simulations, vulnerability assessments, and security testing.
 
 ---
 
-## 🛡️ Purpose of the Lab
+## 🎯 Project Objectives
 
-The lab provides an isolated and controlled environment for cybersecurity learning and authorized security testing.
-
-It can be used for activities such as:
-
-- Network reconnaissance
-- Port scanning
-- Vulnerability assessment
-- Packet analysis
-- Web security testing
-- Exploitation practice
-- Security-tool experimentation
-
-⚠️ **Important:** This laboratory must only be used for systems that you own or have explicit permission to test. Do not use the lab or its tools to attack unauthorized systems.
+- Install and configure Oracle VirtualBox.
+- Deploy Kali Linux as a virtual machine.
+- Configure virtual machine hardware resources.
+- Establish virtual network connectivity.
+- Verify system and network functionality.
+- Create a clean VM snapshot for recovery.
+- Prepare a foundation for future cybersecurity projects.
 
 ---
 
 ## 🏗️ Lab Architecture
 
-![](1-screenshot-title-image.png)
+<p align="center">
+  <img src="https://img.shields.io/badge/Host%20Machine-Windows-blue?style=flat-square&logo=windows" />
+  <br>
+  ⬇️
+  <br>
+  <img src="https://img.shields.io/badge/Hypervisor-Oracle%20VirtualBox-orange?style=flat-square&logo=virtualbox" />
+  <br>
+  ⬇️
+  <br>
+  <img src="https://img.shields.io/badge/Virtual%20Machine-Kali%20Linux-557C94?style=flat-square&logo=kalilinux" />
+  <br>
+  ⬇️
+  <br>
+  <img src="https://img.shields.io/badge/Environment-Cybersecurity%20Lab-red?style=flat-square" />
+</p>
 
+### 🖥️ Lab Components
 
-Additional target machines can be added to the same virtual network in future projects.
-
----
-
-## ⚙️ Lab Configuration
-
-| 🧩 Component       | ⚙️ Configuration   |
-| ------------------ | ------------------  |
-| 🖥️ Host OS         | Windows 10         |
-| 🧠 Host RAM        | 8 GB               |
-| ⚡ Processor       | Intel Core i7      |
-| 🧰 Hypervisor      | VirtualBox 7.2  |
-| 🐉 Security OS     | Kali Linux 2026.2  |
-| 🧠 Kali RAM        | 2048 MB            |
-| 🌐 Virtual Network | NAT Network        |
-| 📡 Network Address | 10.0.0.0/24        |
-| 🐧 Kali IP Address | 10.0.0.2/24        |
-| 🚪 Default Gateway | 10.0.0.1           |
-| 🌍 DNS Server      | 8.8.8.8            |
-| 🔮 Future VM Range | 10.0.0.3–10.0.0.99 |
-
----
-
-# 🪜 Lab Setup Procedure
-
-## Step 1. Install 7-Zip
-
-7-Zip was installed to extract the Kali Linux virtual-machine package, which may be distributed as a `.7z` archive.
-
-**Tool:** 7-Zip
+| Component | Description |
+|---|---|
+| Host Operating System | Windows |
+| Hypervisor | Oracle VirtualBox |
+| Virtual Machine | Kali Linux |
+| Lab Purpose | Cybersecurity & Ethical Hacking |
+| Network Environment | Virtual Network |
+| Security Tools | Nmap, Wireshark, Metasploit |
+| Environment Type | Isolated Virtual Lab |
 
 ---
 
-## Step 2. Install VirtualBox
+## ⚙️ Technologies & Tools
 
-VirtualBox was installed as the hypervisor.
-
----
-
-## Step 3. Create the NAT Network
-
-A dedicated NAT Network was created in VirtualBox.
-
-Configuration:
-Network Name: NatNetwork
-IPv4 Prefix:  10.0.0.0/24
-DHCP:         Enabled
-IPv6:         Disabled
-
-![](2-screenshot-network-settings-1.png)
-
-A **NAT Network** was selected because multiple virtual machines connected to the same NAT Network can communicate with one another while also having outbound network connectivity.
-
-This will allow future attacker and target VMs to communicate within the lab.
-
+| Tool | Purpose |
+|---|---|
+| 🐉 Kali Linux | Penetration testing and security assessment |
+| 📦 Oracle VirtualBox | Virtual machine management |
+| 🌐 Nmap | Network discovery and port scanning |
+| 🦈 Wireshark | Network traffic analysis |
+| 💥 Metasploit Framework | Security testing and exploitation practice |
+| 🖥️ Windows | Host operating system |
 
 ---
 
-## Step 4. Import Kali Linux
+## 🚀 Lab Setup Procedure
 
-The Kali Linux virtual machine was downloaded from the official Kali Linux website and imported into VirtualBox.
+### Step 1: Install Oracle VirtualBox
 
-The VM network adapter was configured as follows:
+Download and install Oracle VirtualBox on the host machine.
 
-```text
-Adapter 1
-Attached to: NAT Network
-Network:     NatNetwork
-Adapter Type: Intel PRO/1000 MT Desktop
-```
+🔗 https://www.virtualbox.org/wiki/Downloads
 
-The VM was allocated:
+### Step 2: Download Kali Linux
 
-```text
-RAM: 2048 MB
-```
-![](3-screenshot-kali-linux.png)
-A shared folder was also configured for transferring required files between the host operating system and the Kali VM.
+Download the pre-built Kali Linux VirtualBox image from the official website.
 
+🔗 https://www.kali.org/get-kali/
 
+### Step 3: Extract the Virtual Machine
 
----
+Use 7-Zip to extract the downloaded Kali Linux archive if required.
 
-## Step 5. Configure the Kali Linux Network
+🔗 https://www.7-zip.org/
 
-The Kali Linux network configuration was checked and configured with a consistent IPv4 address.
+### Step 4: Import Kali Linux into VirtualBox
 
-Example configuration:
+1. Open Oracle VirtualBox.
+2. Select **File → Import Appliance**, if using an OVA file.
+3. Alternatively, add the existing VM using its `.vbox` configuration file.
+4. Review the virtual machine configuration.
+5. Start the Kali Linux virtual machine.
 
-```text
-IP Address: 10.0.0.2
-Subnet Mask: 255.255.255.0
-Gateway: 10.0.0.1
-DNS: 8.8.8.8
-```
+### Step 5: Configure Virtual Machine Resources
 
-A consistent IP address makes it easier to document the lab and reference the Kali machine in future exercises.
+Allocate appropriate hardware resources based on the host machine's available capacity.
 
-![](4-screenshot-kali-network-settings.png)
+| Resource | Configuration |
+|---|---|
+| Memory (RAM) | Based on host capacity |
+| CPU Cores | Based on host capacity |
+| Virtual Disk | Kali Linux virtual disk |
+| Network Adapter | VirtualBox network mode |
+| Graphics Memory | Adjusted for VM performance |
 
----
+### Step 6: Configure Network Connectivity
 
-## Step 6. Create a Clean VM Snapshot
+Configure the virtual network adapter according to the lab requirements.
 
-After completing the initial configuration, a VirtualBox snapshot was created.
+Available network modes include:
 
-Example snapshot name:
+- **NAT:** Provides outbound connectivity through the host.
+- **NAT Network:** Allows communication between connected VMs and outbound connectivity.
+- **Host-Only Adapter:** Creates communication between the host and virtual machines.
+- **Internal Network:** Creates an isolated network between virtual machines.
 
-```text
-Clean Kali - Network Setup
-```
+For security testing, an isolated or dedicated virtual network is recommended.
 
-The snapshot represents the clean baseline of the laboratory.
+### Step 7: Verify Kali Linux
 
-If a future exercise changes or damages the VM configuration, the machine can be restored to this baseline.
-
-
----
-
-# 🔎 Lab Verification
-
-| ✅ Test                        | 🧾 Command                      | 🎯 Expected Result              |
-| ----------------------------- | ------------------------------- | ------------------------------- |
-| 🌐 Check IP address           | `ip a`                          | Correct Kali IP displayed       |
-| 📡 Test gateway               | `ping 10.0.0.1`                 | Successful replies              |
-| 🌍 Test Internet connectivity | `ping 8.8.8.8`                  | Successful replies              |
-| 🔎 Test DNS resolution        | `nslookup networkwalks.com`     | Domain resolves                 |
-| 🧰 Verify Nmap                | `nmap --version`                | Nmap version displayed          |
-| 🔄 Verify snapshot            | Restore snapshot and run `ip a` | Baseline configuration restored |
-
-### Example Results
-
-```text
-IP Address:
-10.0.0.2/24
-
-Gateway:
-10.0.0.1
-
-DNS:
-8.8.8.8
-```
-
----
-
-# 🐞 Problems Encountered & Solutions
-
-Documenting problems is an important part of the project.
-
-## Problem 1. Internet Connectivity After Static IP Configuration
-
-After manually configuring the IPv4 settings, Internet connectivity may fail depending on the Kali/NetworkManager configuration.
-
-One workaround used during this lab was:
+Open the Kali Linux terminal and execute the following commands.
 
 ```bash
-sudo nmcli connection modify "Wired connection 1" ipv4.dad-timeout 0
+# Display network interfaces and IP addresses
+ip a
+
+# Display routing information
+ip route
+
+# Check internet connectivity
+ping -c 4 8.8.8.8
+
+# Verify DNS resolution
+nslookup google.com
+
+# Check Nmap installation
+nmap --version
+
+# Display operating system information
+cat /etc/os-release
 ```
 
-The network connection was then restarted/rebooted and connectivity was tested again.
+### Step 8: Create a Virtual Machine Snapshot
 
-> **Important:** Network interface and connection names may differ between systems. Students should first identify their actual connection name before running an `nmcli` command.
+After completing the initial setup:
 
----
+1. Shut down or save the VM state as appropriate.
+2. Open the VirtualBox Snapshots section.
+3. Create a snapshot of the clean environment.
+4. Give it a descriptive name.
 
-## Problem 2. VirtualBox VT-x / Virtualization Error
+**Recommended snapshot name:**
 
-The VM initially failed to start because hardware virtualization was disabled in the system firmware/BIOS.
+`Clean Kali Linux - Initial Lab Setup`
 
-The issue was resolved by:
-
-1. Restarting the computer.
-2. Entering BIOS/UEFI settings.
-3. Enabling Intel VT-x / hardware virtualization.
-4. Saving the configuration.
-5. Restarting the computer.
-6. Starting the Kali VM again.
-
-After enabling virtualization, the VM started successfully.
-
+Snapshots provide a recovery point before performing experiments or making significant system changes.
 
 ---
 
-# 💡 What I Learned
+## 🔍 Lab Verification
 
-Through this project, I learned how to create and configure a virtual environment for cybersecurity practice.
-
-The most important concepts I learned include:
-
-### 1. NAT vs NAT Network
-
-A standard NAT configuration and a NAT Network serve different purposes.
-
-A NAT Network allows multiple VMs connected to the same virtual network to communicate with one another while providing network address translation for external connectivity.
-
-This makes it useful for building a multi-machine cybersecurity laboratory.
-
-### 2. Virtual Machine Networking
-
-I learned how VirtualBox virtual network adapters connect virtual machines to different types of networks and how network configuration affects communication between machines.
-
-### 3. Static IP Configuration
-
-I learned how to configure and verify IPv4 addressing, subnet masks, gateways, and DNS settings in Kali Linux.
-
-### 4. VM Snapshots
-
-I learned that a clean snapshot should be created **before performing risky or experimental activities**.
-
-This provides a known-good recovery point for future cybersecurity exercises.
-
-### 5. Documentation
-
-I learned that documenting commands, configuration, screenshots, problems, and solutions is an important part of a professional cybersecurity project.
+| Test | Command | Expected Result |
+|---|---|---|
+| IP Address | `ip a` | IP address displayed |
+| Routing | `ip route` | Correct routing table |
+| Connectivity | `ping -c 4 8.8.8.8` | Successful replies |
+| DNS Resolution | `nslookup google.com` | Domain resolves |
+| Nmap Verification | `nmap --version` | Version information displayed |
+| OS Verification | `cat /etc/os-release` | Kali Linux details displayed |
 
 ---
 
-# 🔐 Security & Ethical Use
+## 📸 Lab Screenshots
 
-This laboratory is intended strictly for education purposes only.
+Add screenshots of your actual lab environment below to demonstrate the installation and configuration process.
+
+| Screenshot | Description |
+|---|---|
+| `screenshots/virtualbox.png` | VirtualBox interface |
+| `screenshots/kali-desktop.png` | Kali Linux desktop |
+| `screenshots/terminal-ip.png` | IP configuration |
+| `screenshots/network-test.png` | Network connectivity verification |
+
+<!-- Add screenshots to your repository and uncomment the examples below -->
+
+<!--
+![VirtualBox Environment](screenshots/virtualbox.png)
+
+![Kali Linux Desktop](screenshots/kali-desktop.png)
+
+![Network Configuration](screenshots/terminal-ip.png)
+
+![Connectivity Verification](screenshots/network-test.png)
+-->
 
 ---
 
-# 🔗 Tools & Resources
+## 🧠 Skills & Knowledge Gained
 
-- **7-Zip:** [https://7-zip.org/download.html](https://7-zip.org/download.html)
-- **VirtualBox:** [https://virtualbox.org/wiki/Downloads](https://virtualbox.org/wiki/Downloads)
-- **Kali Linux:** [https://kali.org/get-kali](https://kali.org/get-kali)
+Through this hands-on project, I strengthened my understanding of:
 
----
-
-# 👤 Author
-
-**Debela Beyena**\
-Cybersecurity Professional B084
-
-LinkedIn:[https://www.linkedin.com/feed/foryou/]
+- Virtualization and hypervisor configuration.
+- Kali Linux installation and administration.
+- Virtual network architecture and connectivity.
+- IP addressing, subnetting, and routing fundamentals.
+- Linux command-line operations.
+- Cybersecurity lab preparation and documentation.
+- Safe experimentation using virtual machines and snapshots.
 
 ---
 
-## 📌 Project Information
+## 🔮 Future Improvements
 
-**Program Name:** Cybersecurity at Networkwalks | **Week:** 01 | **Project:** Cybersecurity & Pentesting Lab Setup | **Repository:** GitHub
+- [ ] Deploy a vulnerable machine (Metasploitable 2).
+- [ ] Configure an isolated attacker-and-target network.
+- [ ] Practice network reconnaissance using Nmap.
+- [ ] Analyze network traffic using Wireshark.
+- [ ] Perform vulnerability assessment exercises.
+- [ ] Practice web application security using OWASP Juice Shop.
+- [ ] Document practical penetration-testing scenarios.
+- [ ] Build a multi-machine cybersecurity lab.
+
+---
+
+## 🛡️ Security & Ethical Use
+
+This laboratory is designed exclusively for **educational purposes and authorized security testing**.
+
+All scanning, exploitation, and vulnerability assessment activities must be conducted only against systems that I own or have explicit permission to test.
+
+**Ethical hacking begins with authorization and responsible disclosure.**
+
+---
+
+## 📚 References & Resources
+
+- [Kali Linux Official Website](https://www.kali.org/)
+- [Oracle VirtualBox](https://www.virtualbox.org/)
+- [Nmap Documentation](https://nmap.org/book/)
+- [Wireshark Documentation](https://www.wireshark.org/docs/)
+- [Metasploit Documentation](https://docs.metasploit.com/)
+- [OWASP](https://owasp.org/)
+
+---
+
+## 👨‍💻 Author
+
+**Debela Beyena**
+
+Cybersecurity Analyst | SOC Analyst | Cybersecurity Enthusiast
+
+- GitHub: [@Debelabeyena2026](https://github.com/Debelabeyena2026)
+- LinkedIn: [Connect with me](https://www.linkedin.com/)
+
+---
+
+<p align="center">
+  ⭐ If you find this project helpful, feel free to star the repository!
+  <br><br>
+  <b>Learning by doing. Building skills. Securing the digital world. 🔐</b>
+</p>
