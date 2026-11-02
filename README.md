@@ -189,19 +189,16 @@ Snapshots provide a recovery point before performing experiments or making signi
 
 ##  Lab Screenshots
 
-Add screenshots of your actual lab environment below to demonstrate the installation and configuration process.
 
-| Screenshot | Description |
-|---|---|
-| `screenshots/virtualbox.png` | VirtualBox interface |
-| `screenshots/kali-desktop.png` | Kali Linux desktop |
-| `screenshots/terminal-ip.png` | IP configuration |
-| `screenshots/network-test.png` | Network connectivity verification |
 
 <!-- Add screenshots to your repository and uncomment the examples below -->
+<img width="834" height="506" alt="VB" src="https://github.com/user-attachments/assets/7472b76b-631d-4302-97a7-cc5500fc463b" />
+<img width="1361" height="669" alt="Kali linux" src="https://github.com/user-attachments/assets/551493ba-e7fc-4cdd-8931-5de5bc344728" />
+
+
 
 <!--
-![VirtualBox Environment](screenshots/virtualbox.png)
+![VirtualBox Environment]()
 
 ![Kali Linux Desktop](screenshots/kali-desktop.png)
 
