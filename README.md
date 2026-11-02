@@ -233,7 +233,7 @@ All scanning, exploitation, and vulnerability assessment activities must be cond
 
 ---
 
-## 📚 References & Resources
+##   References & Resources
 
 - [Kali Linux Official Website](https://www.kali.org/)
 - [Oracle VirtualBox](https://www.virtualbox.org/)
@@ -246,9 +246,9 @@ All scanning, exploitation, and vulnerability assessment activities must be cond
 
 ##   Author
 
-**Debela Beyena**
+      **Debela Beyena**
 
-Cybersecurity Analyst | SOC Analyst |
+      Cybersecurity Analyst | SOC Analyst |
 
 - GitHub: [@Debelabeyena2026](https://github.com/Debelabeyena2026)
 - LinkedIn: [Connect with me](https://www.linkedin.com/) Gmail:dabeyhirpa2023@gmail.com
