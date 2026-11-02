@@ -4,12 +4,7 @@
 
 ### Building a Virtual Cybersecurity Lab Using Kali Linux & Oracle VirtualBox
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Platform-VirtualBox-blue?style=for-the-badge&logo=virtualbox" />
-  <img src="https://img.shields.io/badge/OS-Kali%20Linux-557C94?style=for-the-badge&logo=kalilinux" />
-  <img src="https://img.shields.io/badge/Focus-Cybersecurity-red?style=for-the-badge&logo=hackthebox" />
-  <img src="https://img.shields.io/badge/Status-Completed-success?style=for-the-badge" />
-</p>
+
 
 ---
 
