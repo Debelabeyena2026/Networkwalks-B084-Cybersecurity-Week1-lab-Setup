@@ -1,24 +1,16 @@
 
-
-#  Cybersecurity Lab Environment Setup
-
 ### Building a Virtual Cybersecurity Lab Using Kali Linux & Oracle VirtualBox
+---
 
+##     Project Overview
+This project demonstrates the installation and configuration of a virtual cybersecurity laboratory using **Oracle VirtualBox and Kali Linux**.
+The lab provides a secure, isolated, and flexible virtual environment for learning cybersecurity fundamentals, practicing ethical hacking, exploring penetration-testing tools, and conducting hands-on security experiments.The primary objective is to build a practical cybersecurity lab that can be expanded with additional virtual machines to simulate real-world attack and defense scenarios, perform vulnerability assessments, analyze security threats, and strengthen practical cybersecurity skills.
 
+This project serves as a foundation for future cybersecurity experiments, penetration-testing exercises, and security operations training in a controlled environment.
 
 ---
 
-## 📌 Project Overview
-
-This project documents the installation and configuration of a virtual cybersecurity laboratory using **Oracle VirtualBox and Kali Linux**.
-
-The lab provides a controlled and isolated environment for learning cybersecurity fundamentals, practicing ethical hacking, exploring penetration-testing tools, and conducting hands-on security experiments.
-
-The goal is to establish a flexible virtual environment that can be expanded with additional virtual machines for attacker-and-target simulations, vulnerability assessments, and security testing.
-
----
-
-## 🎯 Project Objectives
+##       Project Objectives
 
 - Install and configure Oracle VirtualBox.
 - Deploy Kali Linux as a virtual machine.
@@ -32,7 +24,7 @@ The goal is to establish a flexible virtual environment that can be expanded wit
 
 
 
-## 🏗️ Lab Architecture
+##           Lab Architecture
 
 ```text
 +----------------------------------+
@@ -61,7 +53,7 @@ The goal is to establish a flexible virtual environment that can be expanded wit
 
 
 
-### 🖥️ Lab Components
+###       Lab Components
 
 | Component | Description |
 |---|---|
@@ -75,20 +67,20 @@ The goal is to establish a flexible virtual environment that can be expanded wit
 
 ---
 
-## ⚙️ Technologies & Tools
+##   Technologies & Tools
 
 | Tool | Purpose |
 |---|---|
-| 🐉 Kali Linux | Penetration testing and security assessment |
-| 📦 Oracle VirtualBox | Virtual machine management |
-| 🌐 Nmap | Network discovery and port scanning |
-| 🦈 Wireshark | Network traffic analysis |
-| 💥 Metasploit Framework | Security testing and exploitation practice |
-| 🖥️ Windows | Host operating system |
+|   Kali Linux | Penetration testing and security assessment |
+|   Oracle VirtualBox | Virtual machine management |
+|   Nmap | Network discovery and port scanning |
+|   Wireshark | Network traffic analysis |
+|   Metasploit Framework | Security testing and exploitation practice |
+|   Windows | Host operating system |
 
 ---
 
-## 🚀 Lab Setup Procedure
+##  Lab Setup Procedure
 
 ### Step 1: Install Oracle VirtualBox
 
@@ -195,7 +187,7 @@ Snapshots provide a recovery point before performing experiments or making signi
 
 ---
 
-## 📸 Lab Screenshots
+##  Lab Screenshots
 
 Add screenshots of your actual lab environment below to demonstrate the installation and configuration process.
 
@@ -220,7 +212,7 @@ Add screenshots of your actual lab environment below to demonstrate the installa
 
 ---
 
-## 🧠 Skills & Knowledge Gained
+##   Skills & Knowledge Gained
 
 Through this hands-on project, I strengthened my understanding of:
 
@@ -234,20 +226,7 @@ Through this hands-on project, I strengthened my understanding of:
 
 ---
 
-## 🔮 Future Improvements
-
-- [ ] Deploy a vulnerable machine (Metasploitable 2).
-- [ ] Configure an isolated attacker-and-target network.
-- [ ] Practice network reconnaissance using Nmap.
-- [ ] Analyze network traffic using Wireshark.
-- [ ] Perform vulnerability assessment exercises.
-- [ ] Practice web application security using OWASP Juice Shop.
-- [ ] Document practical penetration-testing scenarios.
-- [ ] Build a multi-machine cybersecurity lab.
-
----
-
-## 🛡️ Security & Ethical Use
+##  Security & Ethical Use
 
 This laboratory is designed exclusively for **educational purposes and authorized security testing**.
 
@@ -268,14 +247,14 @@ All scanning, exploitation, and vulnerability assessment activities must be cond
 
 ---
 
-## 👨‍💻 Author
+##   Author
 
 **Debela Beyena**
 
-Cybersecurity Analyst | SOC Analyst | Cybersecurity Enthusiast
+Cybersecurity Analyst | SOC Analyst |
 
 - GitHub: [@Debelabeyena2026](https://github.com/Debelabeyena2026)
-- LinkedIn: [Connect with me](https://www.linkedin.com/)
+- LinkedIn: [Connect with me](https://www.linkedin.com/) Gmail:dabeyhirpa2023@gmail.com
 
 ---
 
