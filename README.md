@@ -56,7 +56,7 @@ By completing this lab, students will be able to:
 ```text
 +--------------------------------------+
 |          Host Machine                |
-|       Windows 10 / 11 / older OS     |
+|       Windows 10      |
 +--------------------------------------+
                     |
                     v
