@@ -1,148 +1,159 @@
+# Networkwalks B084 — Cybersecurity Week 1 Lab Setup
 
-NETWORKWALKS-B084-WK1-PM1-CYBERSECURITY-LAB-SETUP
+A hands-on virtual cybersecurity lab built with Oracle VirtualBox and Kali Linux. This project provides a secure, isolated environment for learning ethical hacking fundamentals, network analysis, and cybersecurity operations in a controlled setting.
+
+## Overview
+
+This lab demonstrates how to create a functional cybersecurity environment on a host machine by installing Oracle VirtualBox, deploying Kali Linux as a virtual machine, configuring networking, and validating the setup for future security exercises.
+
+The project is designed to serve as a foundation for later penetration-testing labs, network reconnaissance, security monitoring, and red-team/blue-team experimentation in a safe and isolated environment.
+
 ---
 
-     **Summary**
-This project demonstrates the installation and configuration of a virtual cybersecurity laboratory using **Oracle VirtualBox and Kali Linux**.The lab provides a secure, isolated, and flexible virtual environment for learning cybersecurity fundamentals, practicing ethical hacking, exploring penetration-testing tools, and conducting hands-on security experiments.The primary objective is to build a practical cybersecurity lab that can be expanded with additional virtual machines to simulate real-world attack and defense scenarios, perform vulnerability assessments, analyze security threats, and strengthen practical cybersecurity skills.
-This project serves as a foundation for future cybersecurity experiments, penetration-testing exercises, and security operations training in a controlled environment.
+## Project Objectives
 
----
-
-##       Project Objectives
-
-- Install and configure Oracle VirtualBox.
+- Install and configure Oracle VirtualBox on the host system.
 - Deploy Kali Linux as a virtual machine.
-- Configure virtual machine hardware resources.
-- Establish virtual network connectivity.
-- Verify system and network functionality.
-- Create a clean VM snapshot for recovery.
-- Prepare a foundation for future cybersecurity projects.
+- Allocate appropriate CPU, memory, and storage resources.
+- Configure virtual networking for lab communication.
+- Verify operating system, network, and internet connectivity.
+- Create a clean virtual machine snapshot for recovery.
+- Prepare a reusable environment for future cybersecurity activities.
 
 ---
 
-
-
-##           Lab Architecture
+## Lab Architecture
 
 ```text
-+----------------------------------+
-|        Host Machine              |
-|          Windows 10               |
-+----------------------------------+
-                 |
-                 v
-+----------------------------------+
-|          Hypervisor              |
-|       Oracle VirtualBox          |
-+----------------------------------+
-                 |
-                 v
-+----------------------------------+
-|       Virtual Machine            |
-|         Kali Linux               |
-+----------------------------------+
-                 |
-                 v
-+----------------------------------+
-|     Cybersecurity Lab            |
-|   Ethical Hacking Environment    |
-+----------------------------------+
++--------------------------------------+
+|          Host Machine                |
+|          Windows 10 / 11             |
++--------------------------------------+
+                    |
+                    v
++--------------------------------------+
+|           Hypervisor                 |
+|       Oracle VirtualBox             |
++--------------------------------------+
+                    |
+                    v
++--------------------------------------+
+|        Virtual Machine              |
+|          Kali Linux                 |
++--------------------------------------+
+                    |
+                    v
++--------------------------------------+
+|       Cybersecurity Lab             |
+|  Ethical Hacking & Security Testing |
++--------------------------------------+
 ```
 
-
-
-###       Lab Components
+### Lab Components
 
 | Component | Description |
 |---|---|
-| Host Operating System | Windows |
+| Host Operating System | Windows-based machine running the virtualization environment |
 | Hypervisor | Oracle VirtualBox |
-| Virtual Machine | Kali Linux |
-| Lab Purpose | Cybersecurity & Ethical Hacking |
-| Network Environment | Virtual Network |
-| Security Tools | Nmap, Wireshark, Metasploit |
-| Environment Type | Isolated Virtual Lab |
+| Guest Operating System | Kali Linux |
+| Purpose | Learning cybersecurity, networking, and ethical hacking |
+| Network Environment | Virtualized lab network |
+| Tools | Nmap, Wireshark, Metasploit, Linux networking utilities |
+| Security Model | Isolated and controlled environment |
 
 ---
 
-##   Technologies & Tools
+## Technologies and Tools
 
 | Tool | Purpose |
 |---|---|
-|   Kali Linux | Penetration testing and security assessment |
-|   Oracle VirtualBox | Virtual machine management |
-|   Nmap | Network discovery and port scanning |
-|   Wireshark | Network traffic analysis |
-|   Metasploit Framework | Security testing and exploitation practice |
-|   Windows | Host operating system |
+| Kali Linux | Penetration testing and security assessment |
+| Oracle VirtualBox | Virtual machine creation and management |
+| Nmap | Network discovery and port scanning |
+| Wireshark | Packet capture and network traffic analysis |
+| Metasploit Framework | Security testing and exploitation practice |
+| Windows | Host machine platform |
 
 ---
 
-##  Lab Setup Procedure
+## Prerequisites
+
+Before starting the lab, make sure the following are available:
+
+- A Windows host machine with sufficient system resources
+- Oracle VirtualBox installed
+- A valid Kali Linux ISO or virtual appliance image
+- Enough RAM and storage for the virtual machine
+- Internet access to download tools and OS images
+- Administrative privileges on the host machine
+
+---
+
+## Step-by-Step Lab Setup
 
 ### Step 1: Install Oracle VirtualBox
 
-Download and install Oracle VirtualBox on the host machine.
+Download and install the latest version of Oracle VirtualBox from the official site:
 
-🔗 https://www.virtualbox.org/wiki/Downloads
+- Oracle VirtualBox Downloads: https://www.virtualbox.org/wiki/Downloads
 
 ### Step 2: Download Kali Linux
 
-Download the pre-built Kali Linux VirtualBox image from the official website.
+Download the official Kali Linux ISO or a ready-to-use VirtualBox image from the official project website:
 
-🔗 https://www.kali.org/get-kali/
+- Kali Linux Downloads: https://www.kali.org/get-kali/
 
-### Step 3: Extract the Virtual Machine
+### Step 3: Extract the Virtual Machine Archive
 
-Use 7-Zip to extract the downloaded Kali Linux archive if required.
+If the Kali image is compressed, extract it using a file archiver such as 7-Zip before importing it into VirtualBox.
 
-🔗 https://www.7-zip.org/
+- 7-Zip: https://www.7-zip.org/
 
 ### Step 4: Import Kali Linux into VirtualBox
 
 1. Open Oracle VirtualBox.
-2. Select **File → Import Appliance**, if using an OVA file.
-3. Alternatively, add the existing VM using its `.vbox` configuration file.
-4. Review the virtual machine configuration.
+2. Select File → Import Appliance if using an OVA file.
+3. Alternatively, create a new VM and attach the Kali ISO or import the existing virtual machine files.
+4. Review and adjust the VM settings as needed.
 5. Start the Kali Linux virtual machine.
 
 ### Step 5: Configure Virtual Machine Resources
 
-Allocate appropriate hardware resources based on the host machine's available capacity.
+Allocate resources based on your host machine's capacity and the intended lab workload.
 
-| Resource | Configuration |
+| Resource | Recommended Configuration |
 |---|---|
-| Memory (RAM) | Based on host capacity |
-| CPU Cores | Based on host capacity |
-| Virtual Disk | Kali Linux virtual disk |
-| Network Adapter | VirtualBox network mode |
-| Graphics Memory | Adjusted for VM performance |
+| Memory (RAM) | Based on host capacity; typically 2–8 GB |
+| CPU Cores | Based on available host CPU resources |
+| Virtual Disk | Kali Linux virtual disk image |
+| Network Adapter | VirtualBox networking mode |
+| Graphics Memory | Adjust to improve display performance |
 
 ### Step 6: Configure Network Connectivity
 
-Configure the virtual network adapter according to the lab requirements.
+Set up the VM network adapter to match your lab goals.
 
-Available network modes include:
+Available VirtualBox networking modes include:
 
-- **NAT:** Provides outbound connectivity through the host.
-- **NAT Network:** Allows communication between connected VMs and outbound connectivity.
-- **Host-Only Adapter:** Creates communication between the host and virtual machines.
-- **Internal Network:** Creates an isolated network between virtual machines.
+- NAT: Provides outbound internet access through the host.
+- NAT Network: Allows communication with multiple virtual machines and outbound access.
+- Host-Only Adapter: Connects the host and guest systems directly.
+- Internal Network: Creates a private virtual network between VMs.
 
-For security testing, an isolated or dedicated virtual network is recommended.
+For security labs, an isolated or dedicated virtual network is recommended.
 
-### Step 7: Verify Kali Linux
+### Step 7: Verify Kali Linux Installation
 
-Open the Kali Linux terminal and execute the following commands.
+Open a terminal in Kali Linux and run the following commands:
 
 ```bash
-# Display network interfaces and IP addresses
+# Show network interfaces and IP addresses
 ip a
 
-# Display routing information
+# Show routing information
 ip route
 
-# Check internet connectivity
+# Test internet connectivity
 ping -c 4 8.8.8.8
 
 # Verify DNS resolution
@@ -151,49 +162,47 @@ nslookup google.com
 # Check Nmap installation
 nmap --version
 
-# Display operating system information
+# Display OS information
 cat /etc/os-release
 ```
 
-### Step 8: Create a Virtual Machine Snapshot
+### Step 8: Create a Snapshot
 
-After completing the initial setup:
+Once the base environment is working correctly:
 
-1. Shut down or save the VM state as appropriate.
-2. Open the VirtualBox Snapshots section.
-3. Create a snapshot of the clean environment.
-4. Give it a descriptive name.
+1. Shut down the VM or save its state.
+2. Open the VirtualBox Snapshots panel.
+3. Create a snapshot of the clean lab environment.
+4. Name it clearly for future recovery.
 
-**Recommended snapshot name:**
+Recommended snapshot name:
 
 `Clean Kali Linux - Initial Lab Setup`
 
-Snapshots provide a recovery point before performing experiments or making significant system changes.
+Snapshots provide a safe restore point before making configuration changes or running experiments.
 
 ---
 
-## 🔍 Lab Verification
+## Lab Verification
 
 | Test | Command | Expected Result |
 |---|---|---|
-| IP Address | `ip a` | IP address displayed |
-| Routing | `ip route` | Correct routing table |
-| Connectivity | `ping -c 4 8.8.8.8` | Successful replies |
-| DNS Resolution | `nslookup google.com` | Domain resolves |
-| Nmap Verification | `nmap --version` | Version information displayed |
-| OS Verification | `cat /etc/os-release` | Kali Linux details displayed |
+| IP Address | `ip a` | IP address is displayed |
+| Routing | `ip route` | Correct routing table is shown |
+| Connectivity | `ping -c 4 8.8.8.8` | Successful replies from the remote host |
+| DNS Resolution | `nslookup google.com` | Domain resolves successfully |
+| Nmap Verification | `nmap --version` | Version details are displayed |
+| OS Verification | `cat /etc/os-release` | Kali Linux release information is shown |
 
 ---
 
-##  Lab Screenshots
+## Lab Screenshots
 
+These screenshots show the VirtualBox environment and the Kali Linux desktop used for the lab setup.
 
+<img width="834" height="506" alt="VirtualBox Environment" src="https://github.com/user-attachments/assets/7472b76b-631d-4302-97a7-cc5500fc463b" />
 
-<!-- Add screenshots to your repository and uncomment the examples below -->
-<img width="834" height="506" alt="VB" src="https://github.com/user-attachments/assets/7472b76b-631d-4302-97a7-cc5500fc463b" />
-<img width="1361" height="669" alt="Kali linux" src="https://github.com/user-attachments/assets/551493ba-e7fc-4cdd-8931-5de5bc344728" />
-
-
+<img width="1361" height="669" alt="Kali Linux Desktop" src="https://github.com/user-attachments/assets/551493ba-e7fc-4cdd-8931-5de5bc344728" />
 
 <!--
 ![VirtualBox Environment]()
@@ -207,31 +216,29 @@ Snapshots provide a recovery point before performing experiments or making signi
 
 ---
 
-##   Skills & Knowledge Gained
+## Skills and Knowledge Gained
 
-Through this hands-on project, I strengthened my understanding of:
+This project helped strengthen practical understanding in the following areas:
 
-- Virtualization and hypervisor configuration.
-- Kali Linux installation and administration.
-- Virtual network architecture and connectivity.
-- IP addressing, subnetting, and routing fundamentals.
-- Linux command-line operations.
-- Cybersecurity lab preparation and documentation.
-- Safe experimentation using virtual machines and snapshots.
-
----
-
-##  Security & Ethical Use
-
-This laboratory is designed exclusively for **educational purposes and authorized security testing**.
-
-All scanning, exploitation, and vulnerability assessment activities must be conducted only against systems that I own or have explicit permission to test.
-
-**Ethical hacking begins with authorization and responsible disclosure.**
+- Virtualization and hypervisor configuration
+- Kali Linux installation and Linux administration
+- Virtual network design and connectivity
+- IP addressing, routing, and troubleshooting
+- Command-line operations in Linux environments
+- Cybersecurity lab setup and documentation
+- Safe experimentation using virtual machines and snapshots
 
 ---
 
-##   References & Resources
+## Security and Ethical Use
+
+This laboratory is intended strictly for educational purposes and authorized security testing.
+
+All scanning, exploitation, and vulnerability assessment activities must be performed only on systems that you own or have explicit written permission to test. Ethical hacking begins with authorization, transparency, and responsible disclosure.
+
+---
+
+## References and Resources
 
 - [Kali Linux Official Website](https://www.kali.org/)
 - [Oracle VirtualBox](https://www.virtualbox.org/)
@@ -242,14 +249,25 @@ All scanning, exploitation, and vulnerability assessment activities must be cond
 
 ---
 
-##   Author
+## Author
 
-      **Debela Beyena**
+**Debela Beyena**
 
-      Cybersecurity Analyst | SOC Analyst |
+Cybersecurity Analyst | SOC Analyst
 
 - GitHub: [@Debelabeyena2026](https://github.com/Debelabeyena2026)
-- LinkedIn: [Connect with me](https://www.linkedin.com/) Gmail:dabeyhirpa2023@gmail.com
+- LinkedIn: [Connect with me](https://www.linkedin.com/)
+- Email: dabeyhirpa2023@gmail.com
 
 ---
+
+## Repository Summary
+
+This repository documents a foundational cybersecurity lab setup designed to help learners understand how a secure virtual environment is created, configured, and validated before executing practical security tasks.
+
+It is an excellent starting point for students, beginners, and aspiring SOC or cybersecurity professionals who want to build a realistic lab environment on a personal machine.
+
+---
+
+Thank you for visiting this project. Stay curious, keep learning, and build responsibly.
 
