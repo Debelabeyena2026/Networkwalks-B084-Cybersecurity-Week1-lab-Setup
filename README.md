@@ -1,11 +1,9 @@
 
-### Building a Virtual Cybersecurity Lab Using Kali Linux & Oracle VirtualBox
+NETWORKWALKS-B084-WK1-PM1-CYBERSECURITY-LAB-SETUP
 ---
 
-##     Project Overview
-This project demonstrates the installation and configuration of a virtual cybersecurity laboratory using **Oracle VirtualBox and Kali Linux**.
-The lab provides a secure, isolated, and flexible virtual environment for learning cybersecurity fundamentals, practicing ethical hacking, exploring penetration-testing tools, and conducting hands-on security experiments.The primary objective is to build a practical cybersecurity lab that can be expanded with additional virtual machines to simulate real-world attack and defense scenarios, perform vulnerability assessments, analyze security threats, and strengthen practical cybersecurity skills.
-
+     **Summary**
+This project demonstrates the installation and configuration of a virtual cybersecurity laboratory using **Oracle VirtualBox and Kali Linux**.The lab provides a secure, isolated, and flexible virtual environment for learning cybersecurity fundamentals, practicing ethical hacking, exploring penetration-testing tools, and conducting hands-on security experiments.The primary objective is to build a practical cybersecurity lab that can be expanded with additional virtual machines to simulate real-world attack and defense scenarios, perform vulnerability assessments, analyze security threats, and strengthen practical cybersecurity skills.
 This project serves as a foundation for future cybersecurity experiments, penetration-testing exercises, and security operations training in a controlled environment.
 
 ---
@@ -29,7 +27,7 @@ This project serves as a foundation for future cybersecurity experiments, penetr
 ```text
 +----------------------------------+
 |        Host Machine              |
-|          Windows                |
+|          Windows 10               |
 +----------------------------------+
                  |
                  v
